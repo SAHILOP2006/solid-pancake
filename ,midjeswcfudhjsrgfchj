@@ -1,0 +1,9 @@
+import mysql.connector as sqltor
+mycon=sqltor.connect(host="localhost" , user="root" , password ="1234" , database="student")
+if mycon.is_connected():
+     print("connection done")
+
+cursor=mycon.cursor()
+cursor.execute("select * from stud ")
+for i in cursor :
+     print (i)
